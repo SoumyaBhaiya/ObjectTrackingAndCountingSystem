@@ -5,13 +5,13 @@ from trackers.centroid_tracker import CentroidTracker
 from post.line_counter import LineCounter
 from pipeline.engine import Pipeline
 
-def parse_args():
+def parse_args(): #we can add and change these when running the app from command prompt.
     p = argparse.ArgumentParser(description="RoadWatch – Traffic Analytics")
     p.add_argument("--src", default=0, help="Video source (path or camera index)")
     p.add_argument("--output", default=None, help="Optional path to save annotated video (e.g., out.mp4)")
     p.add_argument("--max-frames", type=int, default=None, help="Limit frames for quick tests")
     p.add_argument("--line", type=int, nargs=4, metavar=("x1","y1","x2","y2"),
-                   default=[50, 200, 600, 200], help="Counting line coordinates")
+                   default=[400, 100, 400, 600], help="Counting line coordinates")
     p.add_argument("--min-area", type=int, default=800, help="Min area for motion detector")
     p.add_argument("--dilate", type=int, default=2, help="Dilate iterations for motion mask")
     p.add_argument("--no-display", action="store_true", help="Disable window display")
