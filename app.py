@@ -11,7 +11,7 @@ def parse_args(): #we can add and change these when running the app from command
     p.add_argument("--output", default=None, help="Optional path to save annotated video (e.g., out.mp4)")
     p.add_argument("--max-frames", type=int, default=None, help="Limit frames for quick tests")
     p.add_argument("--line", type=int, nargs=4, metavar=("x1","y1","x2","y2"),
-                   default=[400, 100, 400, 600], help="Counting line coordinates")
+                   default=[400, 100, 400, 800], help="Counting line coordinates")
     p.add_argument("--min-area", type=int, default=800, help="Min area for motion detector")
     p.add_argument("--dilate", type=int, default=2, help="Dilate iterations for motion mask")
     p.add_argument("--no-display", action="store_true", help="Disable window display")
